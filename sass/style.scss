@@ -7,6 +7,9 @@ $color-border-silver: #c6c6c6;
 $color-confirm: #97d231;
 $color-confirm-2: #83b232;
 $color-border-confirm:  #81b22c;
+$color-no: red;
+$color-no-2: #af0000;
+$color-border-no: #740000;
 //main properties
 * {
     box-sizing: border-box;
@@ -51,7 +54,7 @@ body {
 }
 .column {
     flex: 50%;
-    padding: 30px;
+    padding: 0 30px;
 }
 .form-title {
     text-align: center;
@@ -115,7 +118,7 @@ textarea {
         display: inline-block;
         position: relative;
         cursor: pointer;
-        width: 20px;
+        min-width: 20px;
         height: 20px;
         border-radius: 5px;
         border: 1px solid $color-border-silver;
@@ -147,13 +150,16 @@ textarea {
 }
 .button {
     margin: 10px 0;
-    padding: 10px;
+    padding: 10px 40px;
     border: none;
     cursor: pointer;
     color: $color-light;
     text-shadow: 0 0 20px black;
     font-size: 1.1em;
     border-radius: 5px;
+}
+button:disabled {
+    opacity: 0.5;
 }
 .confirm {
     background-image: linear-gradient($color-confirm, $color-confirm-2);
@@ -163,18 +169,39 @@ textarea {
         background-image: linear-gradient($color-confirm-2, $color-confirm-2);
     }
 }
+.no {
+    background-image: linear-gradient($color-no, $color-no-2);
+    border: 1px solid $color-border-no;
+    transition: 0.2s;
+    &:hover {
+        background-image: linear-gradient($color-no-2, $color-no-2);
+    }
+}
 .btn-inline {
     margin-left: auto;
+}
+.logo-down {
+    padding: 10px;
+    opacity: 0.3;
+    text-align: center;
 }
 //RWD
 
 @media(max-width: 768px) {
+    textarea {
+        min-height: 150px;
+    }
+    .form-box {
+        margin-bottom: 10px;
+    }
     .column {
         flex: 100%;
     }
 }
 
 @media(max-width: 500px) {
+    .button {
+        padding: 10px;}
     .column {
         padding: 10px;
     }

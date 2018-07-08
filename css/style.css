@@ -37,7 +37,7 @@ body {
 
 .column {
   flex: 50%;
-  padding: 30px; }
+  padding: 0 30px; }
 
 .form-title {
   text-align: center;
@@ -97,7 +97,7 @@ textarea {
     display: inline-block;
     position: relative;
     cursor: pointer;
-    width: 20px;
+    min-width: 20px;
     height: 20px;
     border-radius: 5px;
     border: 1px solid #c6c6c6;
@@ -125,13 +125,16 @@ textarea {
 
 .button {
   margin: 10px 0;
-  padding: 10px;
+  padding: 10px 40px;
   border: none;
   cursor: pointer;
   color: white;
   text-shadow: 0 0 20px black;
   font-size: 1.1em;
   border-radius: 5px; }
+
+button:disabled {
+  opacity: 0.5; }
 
 .confirm {
   background-image: linear-gradient(#97d231, #83b232);
@@ -140,13 +143,34 @@ textarea {
   .confirm:hover {
     background-image: linear-gradient(#83b232, #83b232); }
 
+.no {
+  background-image: linear-gradient(red, #af0000);
+  border: 1px solid #740000;
+  transition: 0.2s; }
+  .no:hover {
+    background-image: linear-gradient(#af0000, #af0000); }
+
 .btn-inline {
   margin-left: auto; }
 
+.logo-down {
+  padding: 10px;
+  opacity: 0.3;
+  text-align: center; }
+
 @media (max-width: 768px) {
+  textarea {
+    min-height: 150px; }
+
+  .form-box {
+    margin-bottom: 10px; }
+
   .column {
     flex: 100%; } }
 @media (max-width: 500px) {
+  .button {
+    padding: 10px; }
+
   .column {
     padding: 10px; } }
 
