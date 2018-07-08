@@ -125,7 +125,7 @@ textarea {
 
 .button {
   margin: 10px 0;
-  padding: 10px 40px;
+  padding: 10px 25px;
   border: none;
   cursor: pointer;
   color: white;
@@ -169,6 +169,7 @@ button:disabled {
     flex: 100%; } }
 @media (max-width: 500px) {
   .button {
+    font-size: 16px;
     padding: 10px; }
 
   .column {
