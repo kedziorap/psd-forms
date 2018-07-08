@@ -3,13 +3,133 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
+    <title>Forms Trainig</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-    
 </head>
 <body>
-
-
+<div class="big-wrapper">
+    <div class="container">
+        <header class="page-header">
+            <div class="logo">
+                <img src="img/logo.png" alt="logo">
+            </div>
+        </header>
+        <main class="content">
+            <div class="row">
+                <div class="column">
+                    <h2 class="form-title">Register Form</h2>
+                    <div class="form-box">
+                        <div class="form-wrapper">
+                            <form action="#" method="get">
+                                <div class="input-box">
+                                    <div class="icon"><label for="rUsername"><i class="fas fa-user"></i></label></div>
+                                    <div class="input">
+                                        <input id="rUsername" type="text" placeholder="Username" required>
+                                    </div>
+                                </div>
+                                <div class="input-box">
+                                    <div class="icon"><label for="rPassword"><i class="fas fa-lock"></i></label></div>
+                                    <div class="input">
+                                        <input id="rPassword" type="password" placeholder="Password" required>
+                                    </div>
+                                </div>
+                                <div class="input-box">
+                                    <div class="icon"><label for="rRepeatPassword"><i class="fas fa-lock"></i></label></div>
+                                    <div class="input">
+                                        <input id="rRepeatPassword" type="password" placeholder="Repeat password" required>
+                                    </div>
+                                </div>
+                                <div class="input-box">
+                                    <div class="icon"><label for="rEmail"><i class="fas fa-envelope"></i></label></div>
+                                    <div class="input">
+                                        <input id="rEmail" type="email" placeholder="Email" required>
+                                    </div>
+                                </div>
+                                <div class="input-box">
+                                    <div class="icon"><label for="rLocation"><i class="fas fa-map-marker-alt"></i></label></div>
+                                    <div class="input">
+                                        <select name="" id="rLocation" required>
+                                            <option value="0" disabled selected>
+                                                Your Location
+                                            </option>
+                                            <option value="PL">Poland</option>
+                                            <option value="UK">United Kingdom</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="checkbox-box">
+                                    <input id="rCheck" type="checkbox" required>
+                                    <label class="flex" for="rCheck">
+                                    <div class="checkbox"></div> I have read and accept the terms of use.</label>
+                                </div>
+                                <button class="button confirm block" type="submit">Sign up</button>
+                            </form>
+                        </div>
+                    </div>
+                    <h2 class="form-title">Send Email</h2>
+                    <div class="form-box">
+                        <div class="form-wrapper">
+                            <form action="#" method="get">
+                                <div class="input-box">
+                                    <div class="icon"><label for="sUsername"><i class="fas fa-user"></i></label></div>
+                                    <div class="input">
+                                        <input id="sUsername" type="text" placeholder="Your Name" required>
+                                    </div>
+                                </div>
+                                <div class="input-box">
+                                    <div class="icon"><label for="sEmail"><i class="fas fa-envelope"></i></label></div>
+                                    <div class="input">
+                                        <input id="sEmail" type="email" placeholder="Email" required>
+                                    </div>
+                                </div>
+                                <div class="input-box">
+                                    <div class="input">
+                                        <textarea name="text" id="text" placeholder="Type your message"></textarea>
+                                    </div>
+                                </div>
+                                <div class="checkbox-box">
+                                    <input id="siCheck" type="checkbox" required>
+                                    <label class="flex" for="siCheck">
+                                        <div class="checkbox"></div> Send a copy to my Email</label>
+                                </div>
+                                <button class="button confirm block" type="submit">Send Email</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <h2 class="form-title">Sign In Form</h2>
+                    <div class="form-box">
+                        <div class="form-wrapper">
+                            <form action="#" method="get">
+                                <div class="input-box">
+                                    <div class="icon"><label for="siUsername"><i class="fas fa-user"></i></label></div>
+                                    <div class="input">
+                                        <input id="siUsername" type="text" placeholder="Your Name" required>
+                                    </div>
+                                </div>
+                                <div class="input-box">
+                                    <div class="icon"><label for="sEmail"><i class="fas fa-envelope"></i></label></div>
+                                    <div class="input">
+                                        <input id="sEmail" type="email" placeholder="Email" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="checkbox-box">
+                                    <input id="sCheck" type="checkbox" required>
+                                    <label class="flex" for="sCheck">
+                                        <div class="checkbox"></div> Remember me</label> <button class="button confirm btn-inline" type="submit">Sign In</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
 <script src="js/script.js"></script>
 </body>
 </html>
